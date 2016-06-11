@@ -1,0 +1,21 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Helvetica Neue', sans-serif;
+  //background: linear-gradient(#111, #333) no-repeat;
+  color: #999;
+  text-shadow: 0 1px 0 #444;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+@import 'components/web-synth';

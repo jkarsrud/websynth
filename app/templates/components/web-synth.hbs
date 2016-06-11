@@ -1,0 +1,33 @@
+<h2 class="web-synth__title">My web synth</h2>
+<div class="web-synth__playback-controls">
+  <button class="web-synth__button" onclick={{action "togglePlay"}}>{{#if playing}}Pause{{else}}Play{{/if}}</button>
+  <input
+      type="range"
+      oninput={{action "changeVolume" value="target.value"}}
+      value={{volume}}
+      min="0"
+      max="1"
+      step="0.01" />
+</div>
+<div class="web-synth__playback-controls">
+  <div class="pot__wrapper">
+    <svg viewBox="0 0 40 40">
+      <circle r="20" fill="#ddd" cx="20" cy="20">
+
+      </circle>
+      <polyline points="10,10 20,20" stroke-width="4" stroke="#000" fill="none" />
+      <circle class="pot__value-indicator" r="20" fill="none" stroke-width="4" stroke-dasharray="126" stroke-dashoffset="30" stroke="#fff" cx="20" cy="20"/>
+
+    </svg>
+    <input
+        type="range"
+        oninput={{action "changeFrequency" value="target.value"}}
+        value={{frequency}}
+        min="100"
+        max="1500"
+        step="10"
+        id="freq-pot"
+        class="pot" />
+    <label class="pot__label" for="freq-pot">Frequency</label>
+  </div>
+</div>
